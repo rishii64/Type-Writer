@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Syncopate);
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  background: radial-gradient(circle closest-corner at center 250px, #222, black 40%) no-repeat;
+}
+.header{
+  color: rgb(255, 255, 255);
+  font-family: 'Syncopate';
+  font-style: oblique;
+  position: absolute;
+  top: 10vh;
+}
+.typing{
+  background: rgba(255, 255, 255, 0.093);
+  border-radius: 15px;
+  padding: 2em;
+}
+.text {
+  background: radial-gradient(circle farthest-corner at center center,#ccc,#333) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   /* Giving fancy circle effect */
+
+  overflow: hidden;   /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;   /* The typwriter cursor */
+  white-space: nowrap;  /* Keeps the content on a single line */
+  font-family: 'Syncopate';
+  animation: typing 2s steps(20), cursor .8s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {width: 0;}
+  to {width: 100%}
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor {
+  from,to {border-color: transparent}
+  50% {border-color: orange;}
+}
